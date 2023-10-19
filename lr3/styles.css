@@ -206,8 +206,35 @@ ul a {
 
 @media only screen and (max-width: 450px) {
 
+    .container {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 100vh;
+    }
+
+    .left{
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+    }
+
     .center {
+        grid-column: 1 / 4;
+        grid-row: 2 / 4;
         overflow: auto;
+    }
+
+    .right {
+        overflow: auto;
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+        display: grid;
+        grid-template-rows: 5fr 1fr;
+    }
+
+    .bottom{
+        grid-column: 1 / 5;
+        grid-row: 4 / 5;
     }
 
     .center-bottom {
@@ -231,12 +258,12 @@ ul a {
         font-size: 3vw;
     }
 
-    .right {
+    .right-top{
         overflow: auto;
     }
 
-    .right-top{
-        overflow: auto;
+    h1{
+        margin-left: 0;
     }
 
     h3{
@@ -272,5 +299,4 @@ ul a {
     .area-future{
         top: 10%;
     }
-
 }
