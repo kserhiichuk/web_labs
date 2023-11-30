@@ -1,0 +1,38 @@
+.toastContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toast {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.toast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toast-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.toast-body {
+    font-size: 16px;
+    text-align: left;
+}
+
+.btn-close {
+    font-size: 30px;
+    color: #808080;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+}
+
+.top {
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;
+    background-color: #394892;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 0.7vw;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #7497ff;
+    font-weight: bold;
+    font-size: 2.5vw;
+    padding: 0.5vw 0.5vw;
+    transition: background-color 0.5s ease;
+    font-family: system-ui;
+}
+
+.menu a:hover {
+    background-color: #7497ff;
+    color: #ffffff;
+}
+
+.left {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.center {
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+
+.center-top {
+    background-color: #ffffff;
+    border-bottom: 1px solid #000000;
+}
+
+.center-bottom {
+    background-color: #ffffff;
+}
+
+.right {
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+}
+
+.right-top {
+    background-color: #cae3f9;
+    padding: 20px;
+}
+
+.right-bottom {
+    background-color: #cae3f9;
+    border-top: 1px solid #000000;
+}
+
+.bottom {
+    grid-row: 3 / 4;
+    grid-column: 1 / 5;
+    background-color: #394892;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu_img {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.menu_img img {
+    margin-left: 10%;
+    margin-top: 0.5%;
+    max-width: 70%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+}
+
+area {
+    cursor: pointer;
+    position: absolute;
+}
+
+.area-science {
+    top: 45%;
+    left: 11%;
+    width: 12%;
+    padding-bottom: 12%;
+    border-radius: 50%;
+}
+
+.area-sport {
+    top: 5.5%;
+    left: 27.5%;
+    width: 10%;
+    padding-bottom: 10%;
+    border-radius: 50%;
+}
+
+.area-climate {
+    top: 35%;
+    left: 43%;
+    width: 13%;
+    padding-bottom: 13%;
+    border-radius: 50%;
+}
+
+.area-future {
+    top: 18%;
+    left: 65%;
+    width: 11%;
+    padding-bottom: 11%;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 4.5vw;
+    color: #ffffff;
+    margin-top: 3%;
+    margin-left: 6%;
+    text-align: left;
+    font-family: system-ui;
+}
+
+h2 {
+    font-size: 4.5vw;
+    color: #ffffff;
+    margin-top: 3%;
+    margin-right: 6%;
+    text-align: right;
+    font-family: system-ui;
+}
+
+h3 {
+    font-size: 2vw;
+    color: #000000;
+    text-align: left;
+    margin-left: 0.8vw;
+    font-family: system-ui;
+}
+
+p,
+ol {
+    font-size: 1.3vw;
+    color: #000000;
+    text-align: left;
+    margin-left: 10px;
+    font-family: system-ui;
+}
+
+ol {
+    font-size: 1.8vw;
+}
+
+ul a {
+    font-size: 1.5vw;
+    color: #000000;
+    font-family: system-ui;
+}
+
+.right-bottom p {
+    font-size: 1.8vw;
+    color: #000000;
+    text-align: left;
+    margin-left: 0.8vw;
+    font-weight: bold;
+    font-family: system-ui;
+}
+
+.right-top {
+    font-family: system-ui;
+    font-size: 1.5vw;
+}
+
+#toastForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#toastForm label {
+    margin-bottom: 5px;
+}
+
+#toastForm input,
+#toastForm textarea {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 450px) {
+
+    .container {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 100vh;
+    }
+
+    .left {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+    }
+
+    .center {
+        grid-column: 1 / 4;
+        grid-row: 2 / 4;
+        overflow: auto;
+    }
+
+    .right {
+        overflow: auto;
+        grid-row: 3 / 4;
+        grid-column: 4 / 5;
+        display: grid;
+        grid-template-rows: 5fr 1fr;
+    }
+
+    .bottom {
+        grid-column: 1 / 5;
+        grid-row: 4 / 5;
+    }
+
+    .center-bottom {
+        overflow: auto;
+    }
+
+    p {
+        font-size: 2.5vw;
+        margin-right: 5px;
+    }
+
+    .right-bottom p {
+        font-size: 2.8vw;
+    }
+
+    ol {
+        font-size: 2.5vw;
+    }
+
+    .center-bottom ol {
+        font-size: 3vw;
+    }
+
+    .right-top {
+        overflow: auto;
+    }
+
+    h1 {
+        margin-left: 0;
+    }
+
+    h3 {
+        font-size: 3vw;
+    }
+
+    ul {
+        padding-inline-start: 15px;
+        list-style-type: none;
+    }
+
+    ul a {
+        font-size: 2.5vw;
+    }
+
+    .menu a {
+        font-size: 3vw;
+    }
+
+    .menu_img {
+        padding-top: 5px;
+        width: 90%;
+    }
+
+    .area-science {
+        top: 22%;
+    }
+
+    .area-climate {
+        top: 18%;
+    }
+
+    .area-future {
+        top: 10%;
+    }
+}
